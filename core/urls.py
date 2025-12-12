@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls', namespace='main_app'))
+    path('', include('main.urls', namespace='main_app')),
+    path('', include('user.urls', namespace='user_app')),
 ]
 
 admin.site.site_header = 'My admin panel'
