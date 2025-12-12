@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import UserModel
+from .mvc import get_all_users
 
 
 class LoginView(View):
@@ -15,7 +15,7 @@ class RegisterView(View):
 
 class ProfileView(View):
     def get(self, request):
-        users = UserModel.objects.all()
+        users = get_all_users()
         data = {
             'users': users
         }
