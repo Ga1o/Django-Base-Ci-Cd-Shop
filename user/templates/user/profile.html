@@ -3,6 +3,12 @@
 {% block main_content %}
 <div class="row">
     <h1>Profile Page</h1>
+
+    <h2>USERS:</h2>
+    {% for object in data %}
+        <p> {{ object.user_name }}</p>
+    {% endfor %}
 </div>
+
 
 {% endblock  %}
