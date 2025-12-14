@@ -16,7 +16,5 @@ class RegisterView(View):
 class ProfileView(View):
     def get(self, request):
         users = get_all_users()
-        data = {
-            'users': users
-        }
+        data = {'users': users}
         return render(request, 'user/profile.html', data)
